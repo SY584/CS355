@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Search Results</h1>
+        <div id="results"></div>
+        <a href="page1.html">Go Back</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(location.search);
+            const resultsDiv = document.getElementById("results");
+
+            resultsDiv.innerHTML = "<h2>Your Search Criteria:</h2>";
+            resultsDiv.innerHTML += "<div class='results-grid'>" +
+                Array.from(params.entries()).map(([key, value]) =>
+                    `<div class='row'><strong>${key}:</strong> <span>${value || "Not specified"}</span></div>`
+                ).join('') +
+                "</div>";
+        });
+    </script>
+    <div id="toggle">
+        <button id="darkModeToggle">🌙</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

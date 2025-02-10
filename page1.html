@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Find Your Perfect Apartment</h1>
+
+        <img src="Image.png" alt="Apartment comparison">
+
+        <div class="text" style="color:orange">
+            <p>If you are searching for an apartment, you may have heard the term "apartment finder" thrown around. They
+                also go by apartment hunter, but what exactly do apartment finders do? How do they offer their services
+                for free? In this article, we'll dive into the world of apartment finders and explain what they do and
+                how they can help you find your perfect apartment.</p>
+
+            <p>Apartment finders are professionals who specialize in helping people find apartments. They are more
+                commonly called apartment hunters or locating agents. Whatever they are called, the role is generally
+                the same. They typically work for a real estate company and are paid by the apartment complexes. This
+                means that their services are completely free to you, the renter. Some of the real estate companies
+                specialize in apartment locating, while others also function as full-service real estate agencies.</p>
+        </div>
+
+        <form action="page2.html" method="GET">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" list="locationList" placeholder="Enter a location">
+            <datalist id="locationList">
+                <option value="New York"></option>
+                <option value="Los Angeles"></option>
+                <option value="Chicago"></option>
+                <option value="Houston"></option>
+                <option value="San Francisco"></option>
+            </datalist>
+
+            <label for="price">Max Price ($):</label>
+            <input type="number" id="price" name="price" required placeholder="0">
+
+            <label for="bedrooms">Bedrooms:</label>
+            <select id="bedrooms" name="bedrooms">
+                <option value="" disabled selected>Select here</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4+">4+</option>
+            </select>
+
+
+            <label for="amenities">Amenities:</label>
+            <input type="text" id="amenities" name="amenities" placeholder="e.g., Swimming pool, Gym, Parking">
+
+            <button type="submit">Search</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+    <div id="toggle">
+        <button id="darkModeToggle">🌙</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
